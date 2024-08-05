@@ -3,6 +3,7 @@ from django.core.management.base import BaseCommand, CommandParser
 
 # prposed command = python manage.py greetings name
 # proposed output = "hello name , good morning"
+# please do learn 
 
 class Command(BaseCommand):
   
