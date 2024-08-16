@@ -22,6 +22,7 @@ class Command(BaseCommand):
     model = None
     for i in apps.get_app_configs():
       try:
+        print(i.label +"label")
         model = apps.get_model(i.label,model_name)
         break
       except LookupError:
@@ -30,6 +31,8 @@ class Command(BaseCommand):
     if not model:
       raise CommandError(f'Model {model_name} not found in any app')
     print("okkkkkkkkkkkkkkkkkkkkkk")
+    
+    
     with open(filepath,'r') as file:
       reader = csv.DictReader(file)
       for row in reader:
